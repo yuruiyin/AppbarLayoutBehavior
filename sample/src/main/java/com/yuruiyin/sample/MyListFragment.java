@@ -40,7 +40,7 @@ public class MyListFragment extends Fragment {
         MyListFragment fragment = new MyListFragment();
 
         List<String> listData = new ArrayList<>();
-        for (int i = 0; i < 20; i ++) {
+        for (int i = 0; i < 30; i ++) {
             listData.add("tab" + (tabPos + 1) + " - item" + (i + 1));
         }
 
