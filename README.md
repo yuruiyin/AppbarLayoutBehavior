@@ -8,18 +8,21 @@
 
 ## 如何使用
 ### gradle
-```
+
 Step 1. Add the JitPack repository in your root build.gradle at the end of repositories:
-	allprojects {
-		repositories {
-			...
-			maven { url 'https://jitpack.io' }
-		}
+```
+allprojects {
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
 	}
+}
+```
 Step 2. Add the dependency in your app build.gradle:
-	dependencies {
-	        implementation 'com.github.yuruiyin:AppbarLayoutBehavior:v1.0.0'
-	}
+```
+dependencies {
+	implementation 'com.github.yuruiyin:AppbarLayoutBehavior:v1.0.0'
+}
 ```
 ### xml
 ```
