@@ -8,6 +8,7 @@
 
 ## 如何使用
 ### gradle
+```
 Step 1. Add the JitPack repository in your root build.gradle at the end of repositories:
 	allprojects {
 		repositories {
@@ -19,8 +20,9 @@ Step 2. Add the dependency in your app build.gradle:
 	dependencies {
 	        implementation 'com.github.yuruiyin:AppbarLayoutBehavior:v1.0.0'
 	}
-
+```
 ### xml
+```
 <android.support.design.widget.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
@@ -33,6 +35,6 @@ Step 2. Add the dependency in your app build.gradle:
         ......
 
 </android.support.design.widget.AppBarLayout>
-
+```
 ## 参考
 https://blog.csdn.net/vite_s/article/details/78901767
