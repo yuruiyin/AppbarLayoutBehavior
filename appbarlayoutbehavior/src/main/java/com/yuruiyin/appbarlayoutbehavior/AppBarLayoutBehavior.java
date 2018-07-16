@@ -88,10 +88,9 @@ public class AppBarLayoutBehavior extends AppBarLayout.Behavior {
 
     @Override
     public void onNestedPreScroll(CoordinatorLayout coordinatorLayout, AppBarLayout child, View target, int dx, int dy, int[] consumed, int type) {
-        //注意看ViewCompat.TYPE_TOUCH
         LogUtil.d(TAG, "onNestedPreScroll:" + child.getTotalScrollRange() + " ,dx:" + dx + " ,dy:" + dy + " ,type:" + type);
 
-        //返回1时，表示当前target处于非touch的滑动，
+        //type返回1时，表示当前target处于非touch的滑动，
         //该bug的引起是因为appbar在滑动时，CoordinatorLayout内的实现NestedScrollingChild2接口的滑动子类还未结束其自身的fling
         //所以这里监听子类的非touch时的滑动，然后block掉滑动事件传递给AppBarLayout
         if (type == TYPE_FLING) {
