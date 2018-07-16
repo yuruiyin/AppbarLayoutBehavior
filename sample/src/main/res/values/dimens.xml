@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- tab高度 -->
+    <dimen name="common_tab_height">40dp</dimen>
+
+    <!-- 顶部导航栏高度 -->
+    <dimen name="toolbar_height">44dp</dimen>
+
+    <!-- 顶部导航栏标题字体大小 -->
+    <dimen name="toolbar_title_text_size">15dp</dimen>
+
+    <dimen name="common_text_size">16dp</dimen>
+
+    <dimen name="common_divider_small_height">1dp</dimen>
+</resources>
