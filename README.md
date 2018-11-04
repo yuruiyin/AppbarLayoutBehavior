@@ -21,7 +21,7 @@ allprojects {
 Step 2. Add the dependency in your app build.gradle:
 ```
 dependencies {
-	implementation 'com.github.yuruiyin:AppbarLayoutBehavior:v1.0.0'
+	implementation 'com.github.yuruiyin:AppbarLayoutBehavior:v1.0.1'
 }
 ```
 ### xml
