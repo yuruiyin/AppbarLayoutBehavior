@@ -10,7 +10,7 @@
 ### gradle
 
 Step 1. Add the JitPack repository in your root build.gradle at the end of repositories:
-```
+```groovy
 allprojects {
 	repositories {
 		...
@@ -19,13 +19,13 @@ allprojects {
 }
 ```
 Step 2. Add the dependency in your app build.gradle:
-```
+```groovy
 dependencies {
-	implementation 'com.github.yuruiyin:AppbarLayoutBehavior:v1.0.1'
+	implementation 'com.github.yuruiyin:AppbarLayoutBehavior:v1.0.2'
 }
 ```
 ### xml
-```
+```xml
 <android.support.design.widget.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
