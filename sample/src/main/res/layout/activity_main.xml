@@ -19,16 +19,17 @@
         <android.support.design.widget.CollapsingToolbarLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            app:layout_scrollFlags="scroll|exitUntilCollapsed"
+            >
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="400dp"
                 android:background="@color/green"
-                app:layout_collapseMode="parallax"
                 android:gravity="center"
-                android:textSize="@dimen/common_text_size"
                 android:text="这里是可折叠的内容"
+                android:textSize="@dimen/common_text_size"
+                app:layout_collapseMode="parallax"
                 />
 
         </android.support.design.widget.CollapsingToolbarLayout>
@@ -40,7 +41,8 @@
             android:layout_height="@dimen/common_tab_height"
             android:layout_gravity="left"
             android:background="@color/white"
-            android:visibility="visible"/>
+            android:visibility="visible"
+            />
 
         <View
             android:layout_width="match_parent"
@@ -50,18 +52,12 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <android.support.v4.widget.NestedScrollView
-        android:id="@+id/nestedScrollview"
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
-
-        <android.support.v4.view.ViewPager
-            android:id="@+id/viewPager"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-
-    </android.support.v4.widget.NestedScrollView>
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        />
 
 </android.support.design.widget.CoordinatorLayout>

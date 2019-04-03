@@ -50,15 +50,51 @@ public class AppBarLayoutBehavior extends AppBarLayout.Behavior {
     }
 
     /**
+     * 反射获取私有的flingRunnable 属性，考虑support 28以后变量名修改的问题
+     * @return Field
+     * @throws NoSuchFieldException
+     */
+    private Field getFlingRunnableField() throws NoSuchFieldException {
+        try {
+            // support design 27及一下版本
+            Class<?> headerBehaviorType = this.getClass().getSuperclass().getSuperclass();
+            return headerBehaviorType.getDeclaredField("mFlingRunnable");
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+            // 可能是28及以上版本
+            Class<?> headerBehaviorType = this.getClass().getSuperclass().getSuperclass().getSuperclass();
+            return headerBehaviorType.getDeclaredField("flingRunnable");
+        }
+    }
+
+    /**
+     * 反射获取私有的scroller 属性，考虑support 28以后变量名修改的问题
+     * @return Field
+     * @throws NoSuchFieldException
+     */
+    private Field getScrollerField() throws NoSuchFieldException {
+        try {
+            // support design 27及一下版本
+            Class<?> headerBehaviorType = this.getClass().getSuperclass().getSuperclass();
+            return headerBehaviorType.getDeclaredField("mScroller");
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+            // 可能是28及以上版本
+            Class<?> headerBehaviorType = this.getClass().getSuperclass().getSuperclass().getSuperclass();
+            return headerBehaviorType.getDeclaredField("scroller");
+        }
+    }
+
+    /**
      * 停止appbarLayout的fling事件
      * @param appBarLayout
      */
     private void stopAppbarLayoutFling(AppBarLayout appBarLayout) {
         //通过反射拿到HeaderBehavior中的flingRunnable变量
         try {
-            Class<?> headerBehaviorType = this.getClass().getSuperclass().getSuperclass();
-            Field flingRunnableField = headerBehaviorType.getDeclaredField("mFlingRunnable");
-            Field scrollerField = headerBehaviorType.getDeclaredField("mScroller");
+            Class<?> headerBehaviorType = this.getClass().getSuperclass().getSuperclass().getSuperclass();
+            Field flingRunnableField = getFlingRunnableField();
+            Field scrollerField = getScrollerField();
             flingRunnableField.setAccessible(true);
             scrollerField.setAccessible(true);
 
