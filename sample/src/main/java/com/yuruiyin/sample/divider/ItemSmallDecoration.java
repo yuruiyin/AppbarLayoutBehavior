@@ -13,10 +13,8 @@ import com.yuruiyin.sample.R;
 /**
  * <p>Title: </p>
  * <p>Description: </p>
- * <p>Copyright: Copyright (c) 2017</p>
- * <P>Company: 17173</p>
  *
- * @author liangbx
+ * @author yuruiyin
  * @version 2017/7/4
  */
 

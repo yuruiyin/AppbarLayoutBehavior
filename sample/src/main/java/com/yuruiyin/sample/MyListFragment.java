@@ -22,8 +22,6 @@ import butterknife.ButterKnife;
 /**
  * <p>Title: </p>
  * <p>Description: </p>
- * <p>Copyright: Copyright (c) 2017</p>
- * <P>Company: 17173</p>
  *
  * @author yuruiyin
  * @version 2018/7/16

@@ -38,9 +38,9 @@ dependencies {
     implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 
-//    implementation project(':appbarlayoutbehavior')
+    implementation project(':appbarlayoutbehavior')
 
-    implementation 'com.github.yuruiyin:AppbarLayoutBehavior:v1.0.2'
+//    implementation 'com.github.yuruiyin:AppbarLayoutBehavior:v1.0.2'
 
 }
 

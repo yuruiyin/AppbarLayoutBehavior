@@ -92,7 +92,6 @@ public class AppBarLayoutBehavior extends AppBarLayout.Behavior {
     private void stopAppbarLayoutFling(AppBarLayout appBarLayout) {
         //通过反射拿到HeaderBehavior中的flingRunnable变量
         try {
-            Class<?> headerBehaviorType = this.getClass().getSuperclass().getSuperclass().getSuperclass();
             Field flingRunnableField = getFlingRunnableField();
             Field scrollerField = getScrollerField();
             flingRunnableField.setAccessible(true);
