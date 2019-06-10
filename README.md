@@ -21,7 +21,8 @@ allprojects {
 Step 2. Add the dependency in your app build.gradle:
 ```groovy
 dependencies {
-	implementation 'com.github.yuruiyin:AppbarLayoutBehavior:v1.0.2'
+    // 其中latest-version类似 v1.0.3
+	implementation 'com.github.yuruiyin:AppbarLayoutBehavior:latest-version'
 }
 ```
 ### xml
