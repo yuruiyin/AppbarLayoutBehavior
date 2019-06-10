@@ -7,7 +7,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.1.4'
+        classpath 'com.android.tools.build:gradle:3.4.1'
 
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.0'
         
@@ -38,14 +38,14 @@ ext {
     androidSupportVersion = "28.0.0"
 }
 
-subprojects {
-    project.configurations.all {
-        resolutionStrategy.eachDependency { details ->
-            if (details.requested.group == 'com.android.support'
-                    && !details.requested.name.contains('multidex') ) {
-                details.useVersion androidSupportVersion
-            }
-        }
-    }
-}
+//subprojects {
+//    project.configurations.all {
+//        resolutionStrategy.eachDependency { details ->
+//            if (details.requested.group == 'com.android.support'
+//                    && !details.requested.name.contains('multidex') ) {
+//                details.useVersion androidSupportVersion
+//            }
+//        }
+//    }
+//}
 

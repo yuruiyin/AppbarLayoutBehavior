@@ -39,5 +39,29 @@ dependencies {
 
 </android.support.design.widget.AppBarLayout>
 ```
+
+### 混淆
+若使用support库，则需要保证support库中的代码不被混淆，请在proguard-rules.pro中添加如下配置：
+```proguard
+# 保留support下的所有类及内部类
+-keep class android.support.**{*;}
+-dontwarn android.support.v4.**
+# 保留继承support库的类
+-keep public class * extends android.support.v4.**
+-keep public class * extends android.support.v7.**
+-keep public class * extends android.support.annotation.**
+```
+
+若已迁移到androidx，则需要添加如下配置:
+```proguard
+-keep class com.google.android.material.** {*;}
+-keep class androidx.** {*;}
+-keep public class * extends androidx.**
+-keep interface androidx.** {*;}
+-dontwarn com.google.android.material.**
+-dontnote com.google.android.material.**
+-dontwarn androidx.**
+```
+
 ## 参考
 https://blog.csdn.net/vite_s/article/details/78901767
