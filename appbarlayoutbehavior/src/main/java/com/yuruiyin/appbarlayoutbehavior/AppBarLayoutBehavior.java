@@ -60,7 +60,6 @@ public class AppBarLayoutBehavior extends AppBarLayout.Behavior {
             Class<?> headerBehaviorType = this.getClass().getSuperclass().getSuperclass();
             return headerBehaviorType.getDeclaredField("mFlingRunnable");
         } catch (NoSuchFieldException e) {
-            e.printStackTrace();
             // 可能是28及以上版本
             Class<?> headerBehaviorType = this.getClass().getSuperclass().getSuperclass().getSuperclass();
             return headerBehaviorType.getDeclaredField("flingRunnable");
@@ -78,7 +77,6 @@ public class AppBarLayoutBehavior extends AppBarLayout.Behavior {
             Class<?> headerBehaviorType = this.getClass().getSuperclass().getSuperclass();
             return headerBehaviorType.getDeclaredField("mScroller");
         } catch (NoSuchFieldException e) {
-            e.printStackTrace();
             // 可能是28及以上版本
             Class<?> headerBehaviorType = this.getClass().getSuperclass().getSuperclass().getSuperclass();
             return headerBehaviorType.getDeclaredField("scroller");
