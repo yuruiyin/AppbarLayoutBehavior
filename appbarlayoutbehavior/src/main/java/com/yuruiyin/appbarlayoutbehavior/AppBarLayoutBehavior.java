@@ -52,11 +52,10 @@ public class AppBarLayoutBehavior extends AppBarLayout.Behavior {
     /**
      * 反射获取私有的flingRunnable 属性，考虑support 28以后变量名修改的问题
      * @return Field
-     * @throws NoSuchFieldException
      */
     private Field getFlingRunnableField() throws NoSuchFieldException {
         try {
-            // support design 27及一下版本
+            // support design 27及以下版本
             Class<?> headerBehaviorType = this.getClass().getSuperclass().getSuperclass();
             return headerBehaviorType.getDeclaredField("mFlingRunnable");
         } catch (NoSuchFieldException e) {
@@ -69,11 +68,10 @@ public class AppBarLayoutBehavior extends AppBarLayout.Behavior {
     /**
      * 反射获取私有的scroller 属性，考虑support 28以后变量名修改的问题
      * @return Field
-     * @throws NoSuchFieldException
      */
     private Field getScrollerField() throws NoSuchFieldException {
         try {
-            // support design 27及一下版本
+            // support design 27及以下版本
             Class<?> headerBehaviorType = this.getClass().getSuperclass().getSuperclass();
             return headerBehaviorType.getDeclaredField("mScroller");
         } catch (NoSuchFieldException e) {
